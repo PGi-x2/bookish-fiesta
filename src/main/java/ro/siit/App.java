@@ -11,8 +11,4 @@ public class App
         System.out.println( "Hello World!" );
     }
 
-    public static void Array(String[] args) {
-        System.out.println("that's me");
-    }
-
 }
