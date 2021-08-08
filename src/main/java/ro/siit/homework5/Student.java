@@ -8,6 +8,7 @@ public class Student implements ID{
     public String ID = "1380224389723";
 
     @Override
+<<<<<<< HEAD
     public String toString() {
         return "Student{" +
                 "firstName='" + firstName + '\'' +
@@ -16,5 +17,9 @@ public class Student implements ID{
                 ", gender='" + gender + '\'' +
                 ", ID='" + ID + '\'' +
                 '}';
+=======
+    public String getCNP() {
+        return null;
+>>>>>>> origin/main
     }
 }
