@@ -1,5 +1,4 @@
 package ro.siit.homework12;
-<<<<<<< HEAD
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Date;
@@ -31,13 +30,13 @@ public class Student {
     }
 }
 
-=======
-
-public class Student implements ID {
-    public String firstName = "Knight";
-    public String lastName = "Phil";
-    public String dateOfBirth = "24.02.1938";
-    public String gender = "M";
-    public String ID = "1380224389723";
-}
->>>>>>> github/main
+//=======
+//
+//public class Student implements ID {
+//    public String firstName = "Knight";
+//    public String lastName = "Phil";
+//    public String dateOfBirth = "24.02.1938";
+//    public String gender = "M";
+//    public String ID = "1380224389723";
+//}
+//>>>>>>> github/main
