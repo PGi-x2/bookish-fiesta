@@ -1,9 +1,7 @@
 package ro.siit.homework12;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.util.Date;
 
-    //parametrii
+//Parameters
 public class Student {
     private String firstName; //proprietate
     private String lastName;
@@ -11,32 +9,55 @@ public class Student {
     private String gender;
     private int id;
 
-    //Constructor
+    //Constructors
 
-        public Student(String firstName, String lastName, LocalDate dateOfBirth, String gender, int id) {
-            this.firstName = firstName;
-            this.lastName = lastName;
-            this.dateOfBirth = dateOfBirth;
-            this.gender = gender;
-            this.id = id;
+    public Student(String firstName, String lastName, LocalDate dateOfBirth, String gender, int id) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        //setDateOfBirth(dateOfBirth);
+        this.gender = gender;
+        this.id = id;
+
+        try{
+            setFirstName(firstName);
+        }
+        catch (Exception e){
+            System.out.println(e);
+        }
+        try{
+            setLastName(lastName);
+        }
+        catch (Exception e){
+            System.out.println(e);
+        }
+        try{
+            setDateOfBirth(dateOfBirth);
+        }
+        catch (Exception e){
+            System.out.println(e);
         }
 
-        public String getFirstName() { // () metoda
+    }
+
+    //Methods
+    public String getFirstName() { // metoda
         return firstName;
     }
 
-    public void setFirstName(String firstName) { //parametru
+    public void setFirstName(String firstName) throws Exception{ // (parametru)
         this.firstName = firstName;
     }
+    public void setLastName(String lastName) throws Exception { // (parametru)
+        if (lastName == null) {
+        } else {
+            this.lastName = lastName;
+        }
+    }
+    public void setDateOfBirth(LocalDate dateOfBirth) throws Exception {
+        if (dateOfBirth == null || dateOfBirth.getYear() < 1900 || dateOfBirth.getYear() > LocalDate.now().getYear() - 18) {
+            throw new Exception("Invalid date!");
+        } else {
+            this.dateOfBirth = dateOfBirth;
+        }
+    }
 }
-
-//=======
-//
-//public class Student implements ID {
-//    public String firstName = "Knight";
-//    public String lastName = "Phil";
-//    public String dateOfBirth = "24.02.1938";
-//    public String gender = "M";
-//    public String ID = "1380224389723";
-//}
-//>>>>>>> github/main
