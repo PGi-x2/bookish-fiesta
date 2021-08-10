@@ -1,4 +1,6 @@
 package ro.siit.homework12;
+
+import java.sql.Array;
 import java.util.ArrayList;
 import java.util.List;
 
